@@ -1,0 +1,161 @@
+<!-- activity_main.xml -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Judul Aplikasi -->
+        <TextView
+            android:id="@+id/tvAppName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pearlyn Cashier"
+            android:textColor="#E9ABB1"
+            android:fontFamily="@font/preguler"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Nama Pembeli -->
+        <EditText
+            android:id="@+id/editBuyerName"
+            android:fontFamily="@font/plight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Pembeli"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Pilihan Barang 1: Braided Bracelets -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/bracelet1"
+                android:fontFamily="@font/plight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#CB808B"
+                android:checked="false"
+                android:text="Braided Bracelets - Rp30.000" />
+
+            <EditText
+                android:id="@+id/editQuantityPulsa"
+                android:fontFamily="@font/plight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Pilihan Barang 2: Floral Wooden Bracelet -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/bracelet2"
+                android:fontFamily="@font/plight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#CB808B"
+                android:checked="false"
+                android:text="Floral Wooden Bracelet - Rp40.000" />
+
+            <EditText
+                android:id="@+id/editQuantityToken"
+                android:fontFamily="@font/plight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Pilihan Barang 3: Polymer Clay Heart Bracelets -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/bracelet3"
+                android:fontFamily="@font/plight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#CB808B"
+                android:checked="false"
+                android:text="Polymer Clay Heart Bracelets - Rp45.000" />
+
+            <EditText
+                android:id="@+id/editQuantityEmoney"
+                android:fontFamily="@font/plight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Jumlah"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <!-- Pilihan Membership -->
+        <RadioGroup
+            android:id="@+id/radioMembership"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioMember"
+                android:fontFamily="@font/plight"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Membership" />
+
+            <RadioButton
+                android:id="@+id/radioNonMember"
+                android:fontFamily="@font/plight"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:checked="true"
+                android:text="Non-Member" /> <!-- Default ke Non-Member -->
+        </RadioGroup>
+
+        <!-- Tombol Proses Transaksi -->
+        <Button
+            android:id="@+id/btnProcess"
+            android:fontFamily="@font/smonobold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioMembership"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#A35C6E"
+            android:baselineAligned="false"
+            android:text="PROSES"
+            android:textColor="#E9ABB1"
+            android:textSize="20sp" />
+
+        <!-- TextView untuk Menampilkan Struk -->
+        <TextView
+            android:id="@+id/tvReceipt"
+            android:fontFamily="@font/smonoreguler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnProcess"
+            android:layout_marginTop="16dp"
+            android:textColor="#162A40"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
